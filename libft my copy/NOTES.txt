@@ -1,0 +1,28 @@
+remove library from ft_strchr.c
+make sure isalnum works
+write all the source files in Makefile
+try to use gcc and cc
+try -WallWerrorWextra
+try		$(NAME) : $(OBJ)
+			ar -rcs $(NAME) $(OBJ)
+	instead of
+		$(NAME) : $(OBJ)
+			ar -rcs $@ $(OBJ)
+
+try		%.o : %.c
+			$(compiler) -c $(compflags) $(OBJ)
+	instead of
+		%.o : %.c
+			$(compiler) -c $(compflags) $?
+have someone look at memmove and memcpy
+
+USE FRANCINETTE!!!
+
+understand the following:
+	unsigned char * --> doesnt go to negative bytes (usually -128 - 127, changes to 0 - 255), ?less memory? 
+	const void *
+	void *n         --> makes it so that its any kind (eg; char, int, etc.)
+	const char *
+	char *
+	char (*f)
+figure out why ft_substr.c isnt passing paco
